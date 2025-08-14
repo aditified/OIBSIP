@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tribute to Fyodor Dostoevsky</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>FYODOR DOSTOEVSKY</h1>
+  <h2 id="year">(1821 – 1881)</h2>
+  <img src="image.jpg" alt="Fyodor Dostoevsky" class="portrait">
+
+  <p><em>In a cold Moscow winter of 1821, a boy named <strong>Fyodor Mikhailovich Dostoevsky</strong>  
+    was born to a stern military doctor. His childhood was modest and tense, yet filled with a restless curiosity about life and people. 
+    As a young man, he trained to be an engineer, but the pull of ideas and words proved stronger.
+    One fateful day in 1849, his world collapsed—arrested for speaking too freely in a political circle, he stood before a firing squad,
+   staring into the face of death. At the last moment, the execution was halted; his sentence changed to years of brutal labor in the 
+   frozen wastes of Siberia. Those years carved deep lines into his soul, teaching him the weight of suffering and the flicker of hope 
+   that survives it. He returned to the world forever changed, carrying scars both seen and unseen. Life never spared him—poverty, 
+   illness, and loss followed him until his final days. Yet, from that life of hardship, he left behind an unshakable legacy, 
+   one that still speaks to the deepest truths of the human heart.</em></p> 
+
+  <h2>📚 Notable Works</h2>
+  <ul>
+    <li><em>Crime and Punishment</em> (1866)</li>
+    <li><em>The Brothers Karamazov</em> (1880)</li>
+    <li><em>The Idiot</em> (1869)</li>
+    <li><em>Notes from Underground</em> (1864)</li>
+    <li><em>Demons</em> (also known as <em>The Possessed</em>, 1872)</li>
+  </ul>
+
+   <h2>Tribute</h2>
+  <p><em>Fyodor Dostoevsky remains a towering figure in the world of literature, a writer whose words pierce to the very depths of the
+     human soul. His works are not merely stories, but profound journeys into the complexities of morality, suffering, love, and 
+     redemption. Through the trials of his own life—poverty, imprisonment, illness—he forged an unflinching understanding of human 
+     nature, portraying both its darkest shadows and its brightest moments of grace. Dostoevsky’s novels challenge, awaken, 
+     and comfort, reminding us that even in despair there is hope, and in brokenness there is the possibility of salvation. 
+     His legacy endures not only in the pages of his masterpieces but in the countless hearts and minds he continues to move across 
+     generations</em>.</p>
+
+  <div class="carousel" id="quoteCarousel"></div>
+
+  <div class="footer">
+    Tribute page created with admiration for Dostoevsky’s legacy.
+  </div>
+
+  <script>
+    const quotes = [
+      "“The mystery of human existence lies not in just staying alive, but in finding something to live for.”",
+      "“To live without hope is to cease to live.”",
+      "“Pain and suffering are always inevitable for a large intelligence and a deep heart.”",
+      "“Man is sometimes extraordinarily, passionately, in love with suffering.”"
+    ];
+
+    let index = 0;
+    const carousel = document.getElementById('quoteCarousel');
+
+    function typeWriter(text, i = 0) {
+      if (i < text.length) {
+        carousel.innerHTML = text.substring(0, i + 1);
+        setTimeout(() => typeWriter(text, i + 1), 50);
+      } else {
+        setTimeout(() => {
+          index = (index + 1) % quotes.length;
+          typeWriter(quotes[index]);
+        }, 3000);
+      }
+    }
+    
+
+
+    typeWriter(quotes[index]);
+  </script>
+
+</body>
+</html>

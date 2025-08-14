@@ -1,0 +1,100 @@
+:root {
+      --sepia: #fdf6e3;
+      --ink: #3e2f1c;
+      --accent: #d8c3a5;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://www.transparenttextures.com/patterns/old-wall.png') repeat;
+      background-color: var(--sepia);
+      color: var(--ink);
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      color: #5c4b3b;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    #year{
+      font-size: 1.8em;
+    margin-top: -31px;
+    color:#9c7c5fbe ;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-top: 40px;
+    }
+
+
+.portrait {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  border: 5px solid var(--accent);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portrait:hover {
+  transform: scale(1.05);
+  filter: sepia(30%);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+    
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    li:hover {
+      transform: translateX(5px);
+      color: #7b6651;
+    }
+
+    .timeline {
+      margin-top: 30px;
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    .timeline-entry {
+      margin-bottom: 20px;
+    }
+
+    .timeline-entry::before {
+      content: "📍";
+      margin-right: 8px;
+    }
+
+    .carousel {
+      margin-top: 50px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2em;
+      color: #7b6651;
+      min-height: 60px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-style: italic;
+      color: #7b6651;
+    }

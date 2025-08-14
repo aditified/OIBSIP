@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register & Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-box" id="login-box">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email address" />
+      <input type="password" id="login-password" placeholder="Password" />
+      
+      <button onclick="login()">LOG IN</button>
+      <p><a href="#">FORGOT YOUR PASSWORD?</a></p>
+      <p class="toggle" onclick="showRegister()">Don't have an account? Register</p>
+    </div>
+
+    <div class="form-box hidden" id="register-box">
+      <h2>Register</h2>
+      <input type="text" id="register-name" placeholder="Full Name" />
+      <input type="email" id="register-email" placeholder="Email address" />
+      <input type="password" id="register-password" placeholder="Password" />
+      <button onclick="register()">REGISTER</button>
+      <p class="toggle" onclick="showLogin()">Already have an account? Login</p>
+    </div>
+  </div>
+  <div class="animal">
+  <div class="eye left-eye"><div class="pupil"></div></div>
+  <div class="eye right-eye"><div class="pupil"></div></div>
+  <div class="mouth"></div>
+
+</div>
+
+  
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
+
